@@ -1,0 +1,7 @@
+# main app
+docker run --name ws-app-main --expose 5100 --env URL1=main --env OUTPUT1=main1 --env OUTPUT2=main2
+
+# backup app
+docker run --name ws-app-backup1 --expose 5100 --env URL1=backup --env OUTPUT1=backup1 --env OUTPUT2=backup2
+
+

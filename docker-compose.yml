@@ -2,16 +2,15 @@ version: "3.7"
 
 services:
   reverse-proxy:
-#    network_mode: host
-#    image: ws-nginx-tahta:0.1
+    network_mode: host
     build: ./nginx/
     container_name: flask_nginx
-    ports:
-      - "3000:4000"
+#    ports:
+#      - "3000:4000"
     restart: always
 
   ws-app:
-#    network_mode: host
+    network_mode: host
     build: ./app1/
     container_name: flask_app
     depends_on:
